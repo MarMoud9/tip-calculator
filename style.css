@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "space mono", monospace;
+}
+body{
+    background: hsl(185, 41%, 84%) ;
+    margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;}
+.title{
+    color:hsl(183, 100%, 15%) ;
+    text-align: center;
+    margin-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+main{
+    margin-top: 4%;
+    width: fit-content;
+    height: fit-content;
+    
+    border-radius: 20px;
+    background: #fff;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    grid-template-rows: repeat(4, 60px);
+    grid-column-gap: 40px;
+    grid-row-gap: 25px;
+}
+.bill{
+    grid-area: 1 / 1 / 2 / 3;
+    position: relative;
+}
+.bill input, .num-ppl input{
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    color: hsl(183, 100%, 15%) ;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color:hsl(189, 41%, 97%) ;
+}
+.bill::before{
+    content: "";
+    top: 32px;
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    
+}
+.bill input{
+    background: url("images/icon-dollar.svg") hsl(189, 41%, 97%);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-origin: content-box;
+}
+.num-ppl input{
+    background: url("images/icon-person.svg") hsl(189, 41%, 97%);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-origin: content-box;
+}
+.bill input:focus-visible, .num-ppl input:focus-visible, .tip-percentage input:focus-visible{
+    outline: none;
+    border: 1px solid  hsl(172, 67%, 45%)  ;
+    box-shadow: 0px 0px 2px hsl(172, 67%, 45%);
+}
+.bill p, .num-ppl p,.tip-percentage p{
+    color:hsl(186, 14%, 43%) ;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+.tip-percentage{
+    grid-area: 2 / 1 / 4 / 3;
+    
+
+}
+.num-ppl{
+    grid-area: 4 / 1 / 5 / 3;
+}
+.num-ppl input{
+    width: 100%;
+}
+.ppl-title, .bill-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-grid{
+    grid-area: 1 / 3 / 5 / 5;
+    background:hsl(183, 100%, 15%) ;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column ;
+    align-items: center;
+}
+.flex-tip{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+}
+.tip-percentage p{
+    height: fit-content;
+}
+.tip-percentage input{
+    width: 30%;
+    height: 30%;
+    text-align: right;
+    color: hsl(183, 100%, 15%) ;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    padding-right: 5px;
+    background-color:hsl(189, 41%, 97%) ;
+}
+.tip-btn{
+    width: 30%;
+    height: 30%;
+    background-color: hsl(183, 100%, 15%);
+    border: 0px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    transition: .5s;
+}
+.active-btn{
+    background-color: hsl(172, 67%, 45%);
+}
+.tip-percentage button:hover{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+}
+.total-flex{
+    height: 40%;
+    width: 100%;
+
+}
+.tip-amount, .total{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    height: fit-content;
+    
+}
+.tip-amount p, .total p {
+    color: #fff;
+    margin: 0;
+    font-size: 15px;
+}
+.tip-amount p:last-of-type, .total p:last-of-type{
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: hsl(172, 67%, 45%);
+}
+.tip-amount span, .total span{
+    color: hsl(184, 14%, 56%);
+    font-size: 13px;
+}
+
+.total-grid button{
+    height: 15%;
+    width: 90%;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    color: #00494d;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: .2;
+}
+.total-grid button:hover, .total-grid button:active{
+    background-color: hsl(185, 41%, 84%);
+}
+.bill-title .required, .ppl-title .required{
+    color: rgb(255, 85, 85);
+    display: none;
+}
+.bill .active, .num-ppl .active{   
+    display: inline;  
+}
+.bill input::placeholder, .num-ppl input::placeholder{
+    color: hsl(184, 14%, 56%);
+}
+.tip-percentage input::placeholder{
+    
+    
+    text-align: center;
+}

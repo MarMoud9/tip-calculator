@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <p class="title">spli <br> tter</p>
+  <main>
+    <div class="bill">
+      <div class="bill-title">
+        <p>Bill</p>
+        <p class="required" id="bill-required">Can't be zero</p>
+      </div>
+      
+      <input type="number" name="" id="bill"  placeholder="0" >
+    </div>
+    <div class="tip-percentage">
+      <p>Select Tip %</p>
+      <div class="flex-tip">
+        <button class="tip-btn" onclick="bruh(5,'button')">5%</button>
+        <button class="tip-btn" onclick="bruh(10,'button')">10%</button>
+        <button class="tip-btn" onclick="bruh(15,'button')">15%</button>
+        <button class="tip-btn" onclick="bruh(20,'button')">25%</button>
+        <button class="tip-btn" onclick="bruh(25,'button')">50%</button>
+        <input type="number" name="" id="custom-tip" min="1" placeholder="Custom">
+      </div>
+  
+    </div>
+    <div class="num-ppl">
+      <div class="ppl-title">
+        <p>Number of People</p>
+        <p class="required" id="ppl-required">Can't be zero</p>
+      </div>
+      <input type="number" min="1" id="num-ppl" required  placeholder="0">
+    </div>
+    <div class="total-grid">
+      <div class="total-flex">
+        <div class="tip-amount">
+          <p >Tip Amount <br><span>/ person</span></p>
+          <p id="tip-amount">$0.00</p>
+        </div>
+        <div class="total">
+          <p>Total<br><span>/ person</span></p>
+          <p id="total">$0.00</p>
+        </div>
+      </div>
+      <button onclick="reset()" id="reset">reset</button>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
